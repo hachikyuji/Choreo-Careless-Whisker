@@ -1,0 +1,15 @@
+schemaVersion: 1.1
+
+# +optional Incoming connection details for the component
+endpoints:
+  # +required Unique name for the endpoint.
+  # This name will be used when generating the managed API
+  - name: "rest-api"
+    service:
+      port: 8000
+    type: REST
+    networkVisibilities: 
+      - Public
+      - Organization
+    schemaFilePath: .choreo/openapi.yaml
+
